@@ -80,7 +80,7 @@ script StartingArea_CelebiEncounter {
 	lock
 	applymovement(OBJ_EVENT_ID_PLAYER,StartingArea_playerFaceRight)
 	waitmovement(0)
-	msgbox("The strange Pokemon laughs to itself.\n It seems to beckons you to follow.")
+	msgbox("The strange Pokemon laughs to itself.\n It seems to beckon you to follow.")
 	applymovement(2,StartingArea_CelebiLeaves)
 	waitmovement(0)
 	setflag(FLAG_CELEBI_0x020)
