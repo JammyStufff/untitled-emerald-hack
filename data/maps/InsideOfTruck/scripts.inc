@@ -148,3 +148,72 @@ StartingArea_TerritorialWhiscash_Run:
 walk_up
 # 75 "data/maps/InsideOfTruck/scripts.pory"
 step_end
+
+StartingArea_CelebiEncounter::
+# 80 "data/maps/InsideOfTruck/scripts.pory"
+	lock
+# 81 "data/maps/InsideOfTruck/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, StartingArea_playerFaceRight
+# 82 "data/maps/InsideOfTruck/scripts.pory"
+	waitmovement 0
+# 83 "data/maps/InsideOfTruck/scripts.pory"
+	msgbox StartingArea_CelebiEncounter_Text_0
+# 84 "data/maps/InsideOfTruck/scripts.pory"
+	applymovement 2, StartingArea_CelebiLeaves
+# 85 "data/maps/InsideOfTruck/scripts.pory"
+	waitmovement 0
+# 86 "data/maps/InsideOfTruck/scripts.pory"
+	setflag FLAG_CELEBI_0x020
+# 87 "data/maps/InsideOfTruck/scripts.pory"
+	addvar VAR_TEMP_1, 1
+# 88 "data/maps/InsideOfTruck/scripts.pory"
+	release
+	return
+
+
+# 91 "data/maps/InsideOfTruck/scripts.pory"
+StartingArea_playerFaceRight:
+# 92 "data/maps/InsideOfTruck/scripts.pory"
+	face_right
+	step_end
+
+# 95 "data/maps/InsideOfTruck/scripts.pory"
+StartingArea_CelebiLeaves:
+# 97 "data/maps/InsideOfTruck/scripts.pory"
+	walk_up
+# 98 "data/maps/InsideOfTruck/scripts.pory"
+	walk_left
+# 98 "data/maps/InsideOfTruck/scripts.pory"
+	walk_left
+# 98 "data/maps/InsideOfTruck/scripts.pory"
+	walk_left
+# 99 "data/maps/InsideOfTruck/scripts.pory"
+	walk_down
+# 99 "data/maps/InsideOfTruck/scripts.pory"
+	walk_down
+# 100 "data/maps/InsideOfTruck/scripts.pory"
+	walk_right
+# 100 "data/maps/InsideOfTruck/scripts.pory"
+	walk_right
+# 100 "data/maps/InsideOfTruck/scripts.pory"
+	walk_right
+# 100 "data/maps/InsideOfTruck/scripts.pory"
+	walk_right
+# 100 "data/maps/InsideOfTruck/scripts.pory"
+	walk_right
+# 100 "data/maps/InsideOfTruck/scripts.pory"
+	walk_right
+# 100 "data/maps/InsideOfTruck/scripts.pory"
+	walk_right
+# 100 "data/maps/InsideOfTruck/scripts.pory"
+	walk_right
+# 100 "data/maps/InsideOfTruck/scripts.pory"
+	walk_right
+# 100 "data/maps/InsideOfTruck/scripts.pory"
+	walk_right
+# 101 "data/maps/InsideOfTruck/scripts.pory"
+	step_end
+
+StartingArea_CelebiEncounter_Text_0:
+# 83 "data/maps/InsideOfTruck/scripts.pory"
+	.string "The strange Pokemon laughs to itself.\n It seems to beckons you to follow.$"

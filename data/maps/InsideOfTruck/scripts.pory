@@ -76,10 +76,27 @@ step_end
 
 `
 
-script CelebiEncounter {
+script StartingArea_CelebiEncounter {
 	lock
-	applymovement(OBJ_EVENT_ID_PLAYER,face_right)
+	applymovement(OBJ_EVENT_ID_PLAYER,StartingArea_playerFaceRight)
 	waitmovement(0)
-	
+	msgbox("The strange Pokemon laughs to itself.\n It seems to beckons you to follow.")
+	applymovement(2,StartingArea_CelebiLeaves)
+	waitmovement(0)
+	setflag(FLAG_CELEBI_0x020)
+	addvar(VAR_TEMP_1,1)
+	release
 }
 
+movement StartingArea_playerFaceRight {
+	face_right
+}
+
+movement StartingArea_CelebiLeaves
+{
+	walk_up
+	walk_left*3
+	walk_down*2
+	walk_right*10
+	step_end
+}
