@@ -216,4 +216,4 @@ StartingArea_CelebiLeaves:
 
 StartingArea_CelebiEncounter_Text_0:
 # 83 "data/maps/InsideOfTruck/scripts.pory"
-	.string "The strange Pokemon laughs to itself.\n It seems to beckons you to follow.$"
+	.string "The strange Pokemon laughs to itself.\n It seems to beckon you to follow.$"
