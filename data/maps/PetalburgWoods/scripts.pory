@@ -1,3 +1,8 @@
+raw `
+PetalburgWoods_MapScripts::
+	.byte 0
+`
+
 movement ProfFacePlayer
 {
 	face_down
