@@ -2,16 +2,45 @@ raw `
 	LittlerootTown_ProfessorBirchsLab_MapScripts::
 	.byte 0
 `
-script ItsJammyOhMyGod
+script Lab_ItsJammyOhMyGod
 {
 	lock
 	msgbox(JammyText)
 	release
 }
 
+script Lab_ComplainingScientist
+{
+	lock
+	if (var(VAR_TEMP_1) == 0)
+	{
+		msgbox(ScientistTest1)
+		addvar(VAR_TEMP_1,1)
+	}
+	else
+	{
+		msgbox(ScientistTest2)
+	}
+	release
+}
+
 text JammyText
 {
 	"This little guy is working hard on the\n"
-	"rest of the game...\p"
+	"rest of the rom hack...\p"
 	"Best not to interrupt him!$"
+}
+
+text ScientistTest1
+{
+	"I've spent nearly 5 hours trying to\n"
+	"debug this script...\p"
+	"STRAIGHT!$"
+}
+text ScientistTest2
+{
+	"Don't end up like me, kid.\p"
+	"I could've been a Pokemon Champion, but\n"
+	"noooooo! I HAD to get a computer\n"
+	"science degree!$"
 }
