@@ -23,6 +23,8 @@ MeetProf::
 # 38 "data/maps/PetalburgWoods/scripts.pory"
 	setflag FLAG_MET_PROF
 # 39 "data/maps/PetalburgWoods/scripts.pory"
+	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 2
+# 40 "data/maps/PetalburgWoods/scripts.pory"
 	release
 	return
 
