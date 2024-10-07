@@ -22,9 +22,11 @@ script Lab_ComplainingScientist
 
 script Lab_ProfessorMissionStart
 {
+	lock
 	msgbox(ProfessorTalking1)
 	applymovement(7,ProfessorFaceYou)
-
+	msgbox(ProfessorTalking2)
+	release
 }
 
 text JammyText
