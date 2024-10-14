@@ -25,7 +25,17 @@ script Lab_ProfessorMissionStart
 	lock
 	msgbox(ProfessorTalking1)
 	applymovement(7,ProfessorFaceYou)
-	msgbox(ProfessorTalking2)
+	msgbox(ProfessorTalking2, MSGBOX_YESNO)
+    while (var(VAR_RESULT) != 1) {
+        msgbox(format("...you wanna...go home, right?"), MSGBOX_YESNO)
+    }
+	msgbox(ProfessorTalking3)
+	applymovement(7,ProfessorWalkToStarters1)
+	waitmovement(0)
+	applymovement(7,ProfessorWalkToStarters2)
+	applymovement(OBJ_EVENT_ID_PLAYER,PlayerFollowProfessor)
+	waitmovement(0)
+	msgbox(ProfessorTalking4)
 	release
 }
 
@@ -81,7 +91,37 @@ text ProfessorTalking2
 	"mainland of this region, becoming a high\l"
 	"level Pokemon trainer isn't too\l"
 	"difficult as long as you have the\l"
-	"skills! Do you think you're up to it?\p"
+	"skills! Do you think you're up to it?$"
+}
+
+text ProfessorTalking3
+{
+	format("Perfect!\p"
+	"But before we can do that, you need a Pokemon. Follow me!")
+}
+
+text ProfessorTalking4
+{
+	format("{Player}, meet Croagunk, Dwebble, and Murkrow. They're the most energetic, battle hungry Pokemon that I care for! Go ahead and pick the one most appealing to you!")
+}
+
+movement ProfessorWalkToStarters1
+{
+	walk_down * 2
+	step_end
+}
+movement ProfessorWalkToStarters2
+{
+	walk_down * 3
+	walk_right * 5
+	step_end
+}
+
+movement PlayerFollowProfessor
+{
+	walk_down * 3
+	walk_right * 5
+	step_end
 }
 
 raw `
