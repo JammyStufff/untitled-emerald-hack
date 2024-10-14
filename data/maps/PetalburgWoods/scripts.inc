@@ -25,6 +25,8 @@ MeetProf::
 # 39 "data/maps/PetalburgWoods/scripts.pory"
 	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 2
 # 40 "data/maps/PetalburgWoods/scripts.pory"
+	addvar VAR_TEMP_0, 1
+# 41 "data/maps/PetalburgWoods/scripts.pory"
 	release
 	return
 

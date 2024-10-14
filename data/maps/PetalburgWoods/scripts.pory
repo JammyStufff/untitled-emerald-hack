@@ -37,5 +37,6 @@ script MeetProf
 	msgbox(ProfIntro)
 	setflag(FLAG_MET_PROF)
 	warp(MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB,2)
+	addvar(VAR_TEMP_0,1)
 	release
 }
