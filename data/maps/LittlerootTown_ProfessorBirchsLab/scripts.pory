@@ -62,7 +62,7 @@ text ScientistTest2
 
 text ProfessorTalking1
 {
-	"Hm...*click click*...so, *click* the last\n"
+	"Hm...click click...so, click the last\n"
 	"thing you remember is waking up next to\l"
 	"a mysterious, onion-like Pokemon...$"
 }
@@ -102,7 +102,7 @@ text ProfessorTalking3
 
 text ProfessorTalking4
 {
-	format("{Player}, meet Croagunk, Dwebble, and Murkrow. They're the most energetic, battle hungry Pokemon that I care for! Go ahead and pick the one most appealing to you!")
+	format("{PLAYER}, meet Croagunk, Dwebble, and Murkrow. They're the most energetic, battle hungry Pokemon that I care for! Go ahead and pick the one most appealing to you!")
 }
 
 movement ProfessorWalkToStarters1
