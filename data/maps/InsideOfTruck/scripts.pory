@@ -1,6 +1,11 @@
 raw `
 InsideOfTruck_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, StartingArea_OnFrame
 	.byte 0
+
+StartingArea_OnFrame:
+	map_script_2 VAR_TEMP_0, 0, StartingArea_CelebiEncounter
+	.2byte 0
 
 InsideOfTruck_OnLoad:
 	setmetatile 4, 1, METATILE_InsideOfTruck_ExitLight_Top, FALSE
@@ -74,16 +79,24 @@ step_end
 
 `
 
+
+
 script StartingArea_CelebiEncounter {
 	lock
-	applymovement(OBJ_EVENT_ID_PLAYER,StartingArea_playerFaceRight)
-	waitmovement(0)
-	msgbox("The strange Pokemon laughs to itself.\n It seems to beckon you to follow.")
-	applymovement(2,StartingArea_CelebiLeaves)
-	waitmovement(0)
-	setflag(FLAG_CELEBI_0x020)
-	addvar(VAR_TEMP_1,1)
+	if (!flag(FLAG_CELEBI_0x020))
+	{
+		
+		applymovement(OBJ_EVENT_ID_PLAYER,StartingArea_playerFaceRight)
+		waitmovement(0)
+		msgbox("The strange Pokemon laughs to itself.\n It seems to beckon you to follow.")
+		applymovement(2,StartingArea_CelebiLeaves)
+		waitmovement(0)
+		setflag(FLAG_CELEBI_0x020)
+		
+	}
+	addvar(VAR_TEMP_0,1)
 	release
+	end
 }
 
 movement StartingArea_playerFaceRight {
@@ -92,9 +105,9 @@ movement StartingArea_playerFaceRight {
 
 movement StartingArea_CelebiLeaves
 {
-	walk_up
-	walk_left*3
-	walk_down*2
-	walk_right*10
+	walk_fast_up
+	walk_fast_left*3
+	walk_fast_down*2
+	walk_fast_right*10
 	step_end
 }

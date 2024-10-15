@@ -1059,6 +1059,7 @@ static void Task_HandleMainMenuAPressed(u8 taskId)
             default:
                 gPlttBufferUnfaded[0] = RGB_BLACK;
                 gPlttBufferFaded[0] = RGB_BLACK;
+                NewGameBirchSpeech_SetDefaultPlayerName(0); //Maiz
                 gTasks[taskId].func = Task_NewGameBirchSpeech_Cleanup;
                 break;
             case ACTION_CONTINUE:

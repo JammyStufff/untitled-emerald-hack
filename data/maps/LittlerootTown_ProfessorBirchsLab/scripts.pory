@@ -23,6 +23,7 @@ script Lab_ComplainingScientist
 script Lab_ProfessorMissionStart
 {
 	lock
+	turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
 	msgbox(ProfessorTalking1)
 	applymovement(7,ProfessorFaceYou)
 	msgbox(ProfessorTalking2, MSGBOX_YESNO)
@@ -36,7 +37,9 @@ script Lab_ProfessorMissionStart
 	applymovement(OBJ_EVENT_ID_PLAYER,PlayerFollowProfessor)
 	waitmovement(0)
 	msgbox(ProfessorTalking4)
+	addvar(VAR_BIRCH_LAB_STATE,1)
 	release
+	end
 }
 
 text JammyText
@@ -62,7 +65,7 @@ text ScientistTest2
 
 text ProfessorTalking1
 {
-	"Hm...click click...so, click the last\n"
+	"Hm...click click...so, click..the last\n"
 	"thing you remember is waking up next to\l"
 	"a mysterious, onion-like Pokemon...$"
 }
@@ -124,6 +127,69 @@ movement PlayerFollowProfessor
 	step_end
 }
 
+script chooseCroagunk
+{
+	lock
+	msgbox(format("Croagunk slouches, glaring at you. Take it?"),MSGBOX_YESNO)
+	if (var(VAR_RESULT) == 1)
+	{
+		givemon(SPECIES_CROAGUNK, 10, ITEM_NONE)
+        
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox(format("Croagunk playfully jabs you in the hip! You fight the resulting nausea to the best of your ability."))
+            removeobject(11)
+            setflag(FLAG_PICKED_STARTER)
+			addvar(VAR_STARTER_MON,0)
+            call(NicknamePartyMon)
+	}
+	release
+}
+
+script chooseMurkrow
+{
+	lock
+	msgbox(format("Murkrow eyes your bracelet suspiciously and chitters to itself. Take it?"),MSGBOX_YESNO)
+	if (var(VAR_RESULT) == 1)
+	{
+		givemon(SPECIES_MURKROW, 10, ITEM_NONE)
+        
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox(format("Murkrow happily perches on your shoulder! Your wallet feels ever-so-slightly lighter."))
+            removeobject(9)
+            setflag(FLAG_PICKED_STARTER)
+			addvar(VAR_STARTER_MON,1)
+            call(NicknamePartyMon)
+	}
+	release
+}
+
+script chooseDwebble
+{
+	lock
+	msgbox(format("Dwebble absentmindedly drools, melting a hole in the floor. The professor looks rather eager to be rid of this Pokemon. Take it?"),MSGBOX_YESNO)
+	if (var(VAR_RESULT) == 1)
+	{
+		givemon(SPECIES_DWEBBLE, 10, ITEM_NONE)
+        
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox(format("Dwebble beckons you to pick it up! Unfortunately, it's just as heavy as it looks."))
+            removeobject(10)
+            setflag(FLAG_PICKED_STARTER)
+			addvar(VAR_STARTER_MON,2)
+            call(NicknamePartyMon)
+	}
+	release
+}
+
+script NicknamePartyMon{
+ 
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
 raw `
 .set LOCALID_AIDE, 1
 .set LOCALID_BIRCH, 2
@@ -133,6 +199,7 @@ raw `
 .set LOCALID_BALL_CHIKORITA, 6
 
 LittlerootTown_ProfessorBirchsLab_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_ProfessorBirchsLab_OnFrame
 	.byte 0
 
 	@ State descriptions for VAR_DEX_UPGRADE_JOHTO_STARTER_STATE
@@ -187,6 +254,10 @@ LittlerootTown_ProfessorBirchsLab_OnWarp:
 	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6, LittlerootTown_ProfessorBirchsLab_EventScript_AddRivalObject
 	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForJohtoStarters
 	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 5, LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForJohtoStarters
+	.2byte 0
+
+LittlerootTown_ProfessorBirchsLab_OnFrame:
+	map_script_2 VAR_BIRCH_LAB_STATE, 0, Lab_ProfessorMissionStart
 	.2byte 0
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetPlayerPosForReceiveStarter::

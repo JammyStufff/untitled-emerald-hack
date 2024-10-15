@@ -97,15 +97,6 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "StartingArea_EventScript_TerritorialWhiscash"
-    },
-    {
-      "type": "trigger",
-      "x": 1,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_TEMP_1",
-      "var_value": "0",
-      "script": "StartingArea_CelebiEncounter"
     }
   ],
   "bg_events": [
