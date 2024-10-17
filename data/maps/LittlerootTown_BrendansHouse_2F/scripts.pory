@@ -1,3 +1,26 @@
+script RivalsHouse_POKEMON_POKEMON_POKEMON
+{
+	lock
+	msgbox(format("POKEMON POKEMON POKEMON POKEMON POKEMON POKEMON POKEMON POKEMON POKEMON POKEMON POKEMON POKEMON POKEMON POKEMON POKEMON POKEMON POKEMON POKEMON POKEMON POKEMON"))
+	release
+	end
+}
+
+script RivalsHouse_Mother
+{
+	lock
+	msgbox(format("I get it's good to have something you're really into...but my daughter's habits get a little worrying, sometimes."))
+	release
+	end
+}
+
+script RivalsHouse_Wooper
+{
+	lock
+	msgbox(format("This Wooper absolutely FORBIDS you from going upstairs."))
+	release
+	end
+}
 raw `
 .set LOCALID_RIVAL, 1
 

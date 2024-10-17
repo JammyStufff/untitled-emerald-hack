@@ -1,3 +1,10 @@
+script Littleroot_MiscHouse1_LivingTheDream
+{
+	lock
+	msgbox(format("I'm living the dream."))
+	release
+	end
+}
 raw `
 .set LOCALID_MOM, 1
 .set LOCALID_RIVAL_MOM, 4
@@ -409,3 +416,4 @@ RivalsHouse_1F_Text_DoYouHavePokemon:
 	.string "Do you already have your\n"
 	.string "own POKéMON?$"
 `
+

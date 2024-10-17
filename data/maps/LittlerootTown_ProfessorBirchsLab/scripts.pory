@@ -25,15 +25,15 @@ script Lab_ProfessorMissionStart
 	lock
 	turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
 	msgbox(ProfessorTalking1)
-	applymovement(7,ProfessorFaceYou)
+	applymovement(6,ProfessorFaceYou)
 	msgbox(ProfessorTalking2, MSGBOX_YESNO)
     while (var(VAR_RESULT) != 1) {
         msgbox(format("...you wanna...go home, right?"), MSGBOX_YESNO)
     }
 	msgbox(ProfessorTalking3)
-	applymovement(7,ProfessorWalkToStarters1)
+	applymovement(6,ProfessorWalkToStarters1)
 	waitmovement(0)
-	applymovement(7,ProfessorWalkToStarters2)
+	applymovement(6,ProfessorWalkToStarters2)
 	applymovement(OBJ_EVENT_ID_PLAYER,PlayerFollowProfessor)
 	waitmovement(0)
 	msgbox(ProfessorTalking4)
@@ -137,7 +137,7 @@ script chooseCroagunk
         
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox(format("Croagunk playfully jabs you in the hip! You fight the resulting nausea to the best of your ability."))
-            removeobject(11)
+            removeobject(10)
             setflag(FLAG_PICKED_STARTER)
 			addvar(VAR_STARTER_MON,0)
             call(NicknamePartyMon)
@@ -155,7 +155,7 @@ script chooseMurkrow
         
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox(format("Murkrow happily perches on your shoulder! Your wallet feels ever-so-slightly lighter."))
-            removeobject(9)
+            removeobject(8)
             setflag(FLAG_PICKED_STARTER)
 			addvar(VAR_STARTER_MON,1)
             call(NicknamePartyMon)
@@ -173,7 +173,7 @@ script chooseDwebble
         
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox(format("Dwebble beckons you to pick it up! Unfortunately, it's just as heavy as it looks."))
-            removeobject(10)
+            removeobject(9)
             setflag(FLAG_PICKED_STARTER)
 			addvar(VAR_STARTER_MON,2)
             call(NicknamePartyMon)
@@ -188,6 +188,7 @@ script NicknamePartyMon{
         call(Common_EventScript_GetGiftMonPartySlot)
         call(Common_EventScript_NameReceivedPartyMon)
     }
+	setflag(FLAG_SYS_POKEMON_GET)
 }
 
 raw `
