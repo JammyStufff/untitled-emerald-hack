@@ -54,20 +54,6 @@
       "elevation": 0,
       "dest_map": "MAP_INSIDE_OF_TRUCK",
       "dest_warp_id": "0"
-    },
-    {
-      "x": 21,
-      "y": 8,
-      "elevation": 0,
-      "dest_map": "MAP_PETALBURG_WOODS",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 22,
-      "y": 8,
-      "elevation": 0,
-      "dest_map": "MAP_PETALBURG_WOODS",
-      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
@@ -76,7 +62,7 @@
       "x": 14,
       "y": 6,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_TEMP_4",
       "var_value": "0",
       "script": "StartingArea_EventScript_TerritorialWhiscash"
     },
@@ -85,7 +71,7 @@
       "x": 15,
       "y": 6,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_TEMP_4",
       "var_value": "0",
       "script": "StartingArea_EventScript_TerritorialWhiscash"
     },
@@ -94,7 +80,7 @@
       "x": 16,
       "y": 6,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_TEMP_4",
       "var_value": "0",
       "script": "StartingArea_EventScript_TerritorialWhiscash"
     }
