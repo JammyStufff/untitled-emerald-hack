@@ -168,6 +168,8 @@ StartingArea_CelebiEncounter_1:
 	end
 
 StartingArea_CelebiEncounter_2:
+# 88 "data/maps/InsideOfTruck/scripts.pory"
+	setflag FLAG_SYS_B_DASH
 # 89 "data/maps/InsideOfTruck/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, StartingArea_playerFaceRight
 # 90 "data/maps/InsideOfTruck/scripts.pory"
@@ -179,6 +181,8 @@ StartingArea_CelebiEncounter_2:
 # 93 "data/maps/InsideOfTruck/scripts.pory"
 	waitmovement 0
 # 94 "data/maps/InsideOfTruck/scripts.pory"
+	removeobject 2
+# 95 "data/maps/InsideOfTruck/scripts.pory"
 	setflag FLAG_CELEBI_0x020
 	goto StartingArea_CelebiEncounter_1
 

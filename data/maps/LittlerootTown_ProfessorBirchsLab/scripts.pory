@@ -108,6 +108,7 @@ text ProfessorTalking4
 	format("{PLAYER}, meet Croagunk, Dwebble, and Murkrow. They're the most energetic, battle hungry Pokemon that I care for! Go ahead and pick the one most appealing to you!")
 }
 
+
 movement ProfessorWalkToStarters1
 {
 	walk_down * 2
@@ -189,6 +190,51 @@ script NicknamePartyMon{
         call(Common_EventScript_NameReceivedPartyMon)
     }
 	setflag(FLAG_SYS_POKEMON_GET)
+	addvar(VAR_BIRCH_LAB_STATE,1)
+	call(ProfessorMissionDeclare)
+}
+
+script ProfessorMissionDeclare
+{
+	lock
+	msgbox(format("Beautiful! I think you two will make a great pair.\p"
+	"Now, listen close {PLAYER}. This island doesn't have a Pokemon League like the mainland.\p"
+	"Instead, we have the Grande Scavenger Hunt! Sounds intriguing, yes?\p"
+	"I'm sure you're bored of hearing this geezer talk, though, so I'll let the officials explain it to you. All you need to do right now is head to the right of this town, down Route 1. It's a straight path from there to Sympho City, where you can sign up.\p"
+	"Good luck, {PLAYER}! If you manage to win, I'd be honored to accompany you to Mystiq Mountain!\p"
+	"Now...I have so many reports to catch up on..."))
+	release
+	end
+}
+
+script Lab_ProfessorInteract
+{
+	lock
+	switch (var(VAR_BIRCH_LAB_STATE))
+	{
+		case 1:
+		msgbox(format("Don't be shy! Pick one!"))
+		case 2:
+		msgbox(format("Go on, {PLAYER}! I believe in you!"))
+	}
+	release
+	end
+}
+
+script Lab_GetBackHereBitch
+{
+	lock
+	msgbox(format("Where are you going?! Come on, you don't get this opportunity every day!"))
+	applymovement(OBJ_EVENT_ID_PLAYER,PlayerGetBackHere)
+	waitmovement(0)
+	release
+	end	
+}
+
+movement PlayerGetBackHere
+{
+	walk_up
+	step_end
 }
 
 raw `

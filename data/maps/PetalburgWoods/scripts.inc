@@ -12,21 +12,21 @@ ProfFacePlayer:
 	step_end
 
 MeetProf::
-# 34 "data/maps/PetalburgWoods/scripts.pory"
-	lock
-# 35 "data/maps/PetalburgWoods/scripts.pory"
-	applymovement 1, ProfFacePlayer
 # 36 "data/maps/PetalburgWoods/scripts.pory"
-	waitmovement 0
+	lock
 # 37 "data/maps/PetalburgWoods/scripts.pory"
-	msgbox ProfIntro
+	applymovement 1, ProfFacePlayer
 # 38 "data/maps/PetalburgWoods/scripts.pory"
-	setflag FLAG_MET_PROF
+	waitmovement 0
 # 39 "data/maps/PetalburgWoods/scripts.pory"
-	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 2
+	msgbox ProfIntro
 # 40 "data/maps/PetalburgWoods/scripts.pory"
-	addvar VAR_TEMP_0, 1
+	setflag FLAG_MET_PROF
 # 41 "data/maps/PetalburgWoods/scripts.pory"
+	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 2
+# 42 "data/maps/PetalburgWoods/scripts.pory"
+	addvar VAR_TEMP_0, 1
+# 43 "data/maps/PetalburgWoods/scripts.pory"
 	release
 	return
 
@@ -48,6 +48,8 @@ ProfIntro::
 	.string "Why, isn't that town located in the\l"
 	.string "mainland of this region? How did you\l"
 	.string "manage to get here?\p"
-	.string "Well, let's chat somewhere safer. Follow\n"
+	.string "Say, what's your name?\p"
+	.string "Maiz? How unique!\n"
+	.string "Well, let's chat somewhere safer. Follow\l"
 	.string "me to my lab, my Pokemon will keep us\l"
 	.string "safe.$"

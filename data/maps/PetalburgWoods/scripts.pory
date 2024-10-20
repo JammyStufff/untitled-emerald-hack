@@ -24,7 +24,9 @@ text ProfIntro {
 	"Why, isn't that town located in the\l"
 	"mainland of this region? How did you\l"
 	"manage to get here?\p"
-	"Well, let's chat somewhere safer. Follow\n"
+	"Say, what's your name?\p"
+	"Maiz? How unique!\n"
+	"Well, let's chat somewhere safer. Follow\l"
 	"me to my lab, my Pokemon will keep us\l"
 	"safe.$"
 }

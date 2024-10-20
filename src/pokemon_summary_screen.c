@@ -4020,6 +4020,8 @@ static void SwapMovesTypeSprites(u8 moveIndex1, u8 moveIndex2)
 static u8 LoadMonGfxAndSprite(struct Pokemon *mon, s16 *state)
 {
     struct PokeSummary *summary = &sMonSummaryScreen->summary;
+    u16 paletteNum;
+    struct Sprite *sprite = &gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_MON]];
 
     switch (*state)
     {
@@ -4053,7 +4055,8 @@ static u8 LoadMonGfxAndSprite(struct Pokemon *mon, s16 *state)
         (*state)++;
         return 0xFF;
     case 1:
-        LoadCompressedSpritePaletteWithTag(GetMonSpritePalFromSpeciesAndPersonality(summary->species2, summary->isShiny, summary->pid), summary->species2);
+        paletteNum = sprite->oam.paletteNum;
+        LoadHueShiftedMonPalette(GetMonSpritePalFromSpeciesAndPersonality(summary->species2, summary->isShiny, summary->pid), 0x100 | paletteNum * 16, 32, summary->pid);
         SetMultiuseSpriteTemplateToPokemon(summary->species2, B_POSITION_OPPONENT_LEFT);
         (*state)++;
         return 0xFF;

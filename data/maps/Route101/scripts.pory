@@ -1,3 +1,15 @@
+script BugCatcherDennis
+{
+	trainerbattle_single(TRAINER_SAWYER_1,format("You just got a Pokemon, didn't you?\p""Yay! That means I'm your first opponent!"),format("It seems I was your first victory, too...")) #Bug Catcher Dennis
+	msgbox("Wow, you're tough!",MSGBOX_AUTOCLOSE)
+}
+
+script LassEmma
+{
+	trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_1,format("Isn't it so nice out? It puts me in the mood to battle!"),format("I'm still happy to be out here!")) #Lass Emma
+	msgbox("Thanks for sharing this moment with me!",MSGBOX_AUTOCLOSE)
+}
+
 raw `
 .set LOCALID_BIRCH, 2
 .set LOCALID_ZIGZAGOON, 4

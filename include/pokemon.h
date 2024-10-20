@@ -831,6 +831,8 @@ void PlayMapChosenOrBattleBGM(u16 songId);
 void CreateTask_PlayMapChosenOrBattleBGM(u16 songId);
 const u32 *GetMonFrontSpritePal(struct Pokemon *mon);
 const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, bool32 isShiny, u32 personality);
+const struct CompressedSpritePalette *GetMonSpritePalStruct(struct Pokemon *mon);
+const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u16 species, u32 otId , u32 personality);
 const u32 *GetMonSpritePalFromSpecies(u16 species, bool32 isShiny, bool32 isFemale);
 bool8 IsMoveHM(u16 move);
 bool8 IsMonSpriteNotFlipped(u16 species);

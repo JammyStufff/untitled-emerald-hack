@@ -89,7 +89,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Lab_ProfessorInteract",
       "flag": "0"
     },
     {
@@ -169,7 +169,24 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_BIRCH_LAB_STATE",
+      "var_value": "1",
+      "script": "Lab_GetBackHereBitch"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_BIRCH_LAB_STATE",
+      "var_value": "1",
+      "script": "Lab_GetBackHereBitch"
+    }
   ],
   "bg_events": [
 
