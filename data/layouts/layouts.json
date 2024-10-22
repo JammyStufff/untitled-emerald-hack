@@ -4410,6 +4410,16 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_OLDALE_TOWN_SCAVENGER_HUNT_BUILDING",
+      "name": "OldaleTown_ScavengerHuntBuilding_Layout",
+      "width": 20,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonDayCare",
+      "border_filepath": "data/layouts/OldaleTown_ScavengerHuntBuilding/border.bin",
+      "blockdata_filepath": "data/layouts/OldaleTown_ScavengerHuntBuilding/map.bin"
     }
   ]
 }
