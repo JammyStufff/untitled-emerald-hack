@@ -1,6 +1,7 @@
 script Littleroot_MiscHouse1_LivingTheDream
 {
 	lock
+	faceplayer()
 	msgbox(format("I'm living the dream."))
 	release
 	end

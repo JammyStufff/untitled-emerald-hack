@@ -1,3 +1,21 @@
+script TrebleTown_FatGuy
+{
+	lock
+	faceplayer()
+	msgbox(format("Technology is incredible!\p""At the blink of an eye, you can make a mediocre rom hack and share it online!"))
+	release
+	end
+}
+
+script TrebleTown_RandomMan
+{
+	lock
+	faceplayer()
+	msgbox(format("Welcome to Treble Town, kid! Don't start any...TREBLE!\p""HA! HA! HA! HA! HA! HA! Ain't I a riot?"))
+	release
+	end
+}
+
 raw `
 .set LOCALID_TWIN, 1
 .set LOCALID_MOM, 4

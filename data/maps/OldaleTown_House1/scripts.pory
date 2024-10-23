@@ -1,3 +1,23 @@
+script SymphoCity_House1_TeachingYamper
+{
+	lock
+	msgbox(format("Yamper, sit!\p"
+	"Yamper, roll over!\p"
+	"Yamper, use Tail Whip!"))
+	faceplayer()
+	msgbox(format("My Yamper is so well trained!"))
+	release
+	end
+}
+
+script SymphoCity_House1_WeHaveToGo
+{
+	lock
+	msgbox(format("Honey, hurry up! We have to go!"))
+	release
+	end
+}
+
 raw `
 OldaleTown_House1_MapScripts::
 	.byte 0

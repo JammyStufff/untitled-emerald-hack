@@ -1,3 +1,14 @@
+script SymphoCity_GetMeOuttaHere
+{
+	lock
+	msgbox(format("get me out of here"))
+	release
+	end
+}
+
+
+
+
 raw `
 .set LOCALID_MART_EMPLOYEE, 2
 .set LOCALID_FOOTPRINTS_MAN, 3

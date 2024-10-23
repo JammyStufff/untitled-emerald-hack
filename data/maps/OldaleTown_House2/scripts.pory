@@ -1,3 +1,26 @@
+script SymphoCity_House2_WatchingTV
+{
+	lock
+	msgbox(format("I've been watching these guys fight for 18 episodes straight now.\p"
+	"I know this is what I came for, but man do I miss Dragonite Ball..."))
+	release
+	end
+}
+
+script SymphoCity_House2_Fridge
+{
+	lock
+	random(4)
+	 while (var(VAR_RESULT) != 0) {
+       msgbox(format("Ugh, there's nothing good in the fridge right now...\p"
+	   "Maybe if I close it and check again...?"))
+	   addvar(VAR_RESULT,-1)
+    }
+	msgbox("Still nothing good...")
+	release
+	end
+}
+
 raw `
 OldaleTown_House2_MapScripts::
 	.byte 0
