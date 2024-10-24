@@ -1,4 +1,8 @@
-const rival_ID = 6
+script Route1_KILLRIVAL
+{
+	removeobject(6)
+	end
+}
 
 script BugCatcherDennis
 {
@@ -15,10 +19,34 @@ script LassEmma
 script Route1_MeetRival
 {
 	lock
+	addobject(6)
 	getplayerxy(VAR_TEMP_0,VAR_TEMP_1)
-	setobjectxy(rival_ID, var(VAR_TEMP_0), 9)
-	applymovement(rival_ID,RivalApproach)
+	switch (var(VAR_TEMP_0))
+	{
+		case 25:
+		setobjectxy(6, 25, 9)
+		case 26:
+		setobjectxy(6, 26, 9)
+	}
+	applymovement(6,RivalApproach)
 	waitmovement(0)
+	trainerbattle_no_whiteout_continue_script(TRAINER_GRUNT_AQUA_HIDEOUT_2,format("YOU HAVE POKEMON? FIGHT FIGHT FIGHT FIGHT FIGHT FIGHT FIGHT FIGHT FIGHT FIGHT FIGHT FIGHT"), format("AW DANGIT"), Route1_PostRivalBattle) # Rival Lace
+	end
+}
+
+script Route1_PostRivalBattle
+{
+	addobject(6)
+	specialvar(VAR_RESULT,GetBattleOutcome)
+	if (var(VAR_RESULT) == B_OUTCOME_WON)
+	{
+		msgbox(format("WOW! SO STRONG! SO STRONG!"))
+	}
+	else
+	{
+		msgbox(format("GOOD TRY! YOU FIGHT GREAT!"))
+	}
+	special(HealPlayerParty)
 	release
 	end
 }
@@ -34,6 +62,7 @@ raw `
 .set LOCALID_ZIGZAGOON, 4
 
 Route101_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Route1_KILLRIVAL
 	map_script MAP_SCRIPT_ON_TRANSITION, Route101_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route101_OnFrame
 	.byte 0

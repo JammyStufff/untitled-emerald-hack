@@ -14076,4 +14076,22 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+
+
+    //Runes
+    [ITEM_SPEEDSTER_RUNE] =
+    {
+        .name = _("Speedster Rune"),
+        .price = 2000,
+        .isRune = TRUE,
+        .description = COMPOUND_STRING(
+            "A wooden toy carved\n"
+            "in the image of a\n"
+            "Pokémon. Can be sold."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_PokeshiDoll,
+        .iconPalette = gItemIconPalette_PokeshiDoll,
+    },
 };

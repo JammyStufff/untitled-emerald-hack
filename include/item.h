@@ -18,6 +18,7 @@ struct Item
     u8 pluralName[ITEM_NAME_PLURAL_LENGTH];
     u8 holdEffect;
     u8 holdEffectParam;
+    bool8 isRune;
     u8 importance;
     u8 pocket;
     u8 type;
