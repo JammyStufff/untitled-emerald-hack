@@ -10033,9 +10033,11 @@ BattleScript_EffectSnow::
 BattleScript_RuneActivateMsgIn::
 	printstring STRINGID_RUNEACTIVATE
 	waitmessage B_WAIT_TIME_LONG
-	end3
+	return
 
 BattleScript_SpeedsterRuneMsgIn::
+	call BattleScript_RuneActivateMsgIn
+	playanimation BS_SCRIPTING, B_ANIM_HELD_ITEM_EFFECT, sB_ANIM_ARG1
 	printstring STRINGID_SPEEDSTERRUNE
 	waitmessage B_WAIT_TIME_LONG
 	end3
