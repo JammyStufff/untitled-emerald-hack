@@ -133,6 +133,8 @@ F_TRAINER_FEMALE |
 #line 125
             .species = SPECIES_SWINUB,
             .gender = TRAINER_MON_RANDOM_GENDER,
+#line 125
+            .heldItem = ITEM_SPEEDSTER_RUNE,
 #line 127
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
 #line 126

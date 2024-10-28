@@ -14084,6 +14084,7 @@ const struct Item gItemsInfo[] =
         .name = _("Speedster Rune"),
         .price = 2000,
         .isRune = TRUE,
+        .holdEffect = HOLD_EFFECT_SPEEDSTER_RUNE,
         .description = COMPOUND_STRING(
             "A wooden toy carved\n"
             "in the image of a\n"
