@@ -906,6 +906,11 @@ u32 ItemId_GetHoldEffectParam(u32 itemId)
     return gItemsInfo[SanitizeItemId(itemId)].holdEffectParam;
 }
 
+bool32 ItemId_GetIsRune(u32 itemId)
+{
+    return gItemsInfo[SanitizeItemId(itemId)].isRune;
+}
+
 const u8 *ItemId_GetDescription(u16 itemId)
 {
     return gItemsInfo[SanitizeItemId(itemId)].description;

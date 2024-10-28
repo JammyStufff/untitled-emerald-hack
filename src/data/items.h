@@ -14083,16 +14083,17 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Speedster Rune"),
         .price = 2000,
-        .isRune = TRUE,
         .holdEffect = HOLD_EFFECT_SPEEDSTER_RUNE,
+        .holdEffectParam = 0,
         .description = COMPOUND_STRING(
-            "A wooden toy carved\n"
-            "in the image of a\n"
-            "Pokémon. Can be sold."),
+            "Elevates the holder\n"
+            "in the air. If hit,\n"
+            "this item will burst."),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_PokeshiDoll,
-        .iconPalette = gItemIconPalette_PokeshiDoll,
+        .flingPower = 10,
+        .iconPic = gItemIcon_AirBalloon,
+        .iconPalette = gItemIconPalette_AirBalloon,
     },
 };

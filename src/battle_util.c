@@ -7333,6 +7333,14 @@ u8 ItemBattleEffects(u8 caseID, u32 battler, bool32 moveTurn)
     atkHoldEffect = GetBattlerHoldEffect(gBattlerAttacker, TRUE);
     atkHoldEffectParam = GetBattlerHoldEffectParam(gBattlerAttacker);
 
+    if (battlerHoldEffect >= HOLD_EFFECT_SPEEDSTER_RUNE)
+    {
+        gLastUsedItem = atkItem;
+        gBattleScripting.battler = battler;
+        BattleScriptPushCursorAndCallback(BattleScript_RuneActivateMsgIn);
+        RecordItemEffectBattle(battler, battlerHoldEffect);
+    }
+
     switch (caseID)
     {
     case ITEMEFFECT_ON_SWITCH_IN:
@@ -7340,6 +7348,13 @@ u8 ItemBattleEffects(u8 caseID, u32 battler, bool32 moveTurn)
         {
             switch (battlerHoldEffect)
             {
+            //Runes
+            case HOLD_EFFECT_SPEEDSTER_RUNE:
+            gBattleScripting.animArg1 = STAT_ANIM_PLUS1 + STAT_ATK;
+            gBattleScripting.animArg2 = 0;
+            BattleScriptPushCursorAndCallback(BattleScript_SpeedsterRuneMsgIn);
+            break;
+            //Not Runes
             case HOLD_EFFECT_DOUBLE_PRIZE:
                 if (GetBattlerSide(battler) == B_SIDE_PLAYER && !gBattleStruct->moneyMultiplierItem)
                 {

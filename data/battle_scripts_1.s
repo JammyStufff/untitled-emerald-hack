@@ -10029,3 +10029,13 @@ BattleScript_EffectSnow::
 	call BattleScript_CheckPrimalWeather
 	setfieldweather ENUM_WEATHER_SNOW
 	goto BattleScript_MoveWeatherChange
+
+BattleScript_RuneActivateMsgIn::
+	printstring STRINGID_RUNEACTIVATE
+	waitmessage B_WAIT_TIME_LONG
+	end3
+
+BattleScript_SpeedsterRuneMsgIn::
+	printstring STRINGID_SPEEDSTERRUNE
+	waitmessage B_WAIT_TIME_LONG
+	end3
