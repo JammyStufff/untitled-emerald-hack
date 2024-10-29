@@ -715,8 +715,10 @@
 #define STRINGID_PLAYERWHITEOUT3                      713
 #define STRINGID_RUNEACTIVATE                         714
 #define STRINGID_SPEEDSTERRUNE                        715
+#define STRINGID_VENOMOUSRUNE                         716
+#define STRINGID_VENOMOUSRUNEPOISON                   717
 
-#define BATTLESTRINGS_COUNT                           716
+#define BATTLESTRINGS_COUNT                           718
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

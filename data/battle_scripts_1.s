@@ -10041,3 +10041,9 @@ BattleScript_SpeedsterRuneMsgIn::
 	printstring STRINGID_SPEEDSTERRUNE
 	waitmessage B_WAIT_TIME_LONG
 	end3
+
+BattleScript_VenomousRunePoisonMsgIn::
+	seteffectsecondary MOVE_EFFECT_POISON
+	printstring STRINGID_VENOMOUSRUNEPOISON
+	waitmessage B_WAIT_TIME_LONG
+end3

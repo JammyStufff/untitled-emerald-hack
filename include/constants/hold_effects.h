@@ -167,6 +167,7 @@
 
 //Runes
 #define HOLD_EFFECT_SPEEDSTER_RUNE      185
+#define HOLD_EFFECT_POISON_TOUCH        186
 
 #define HOLD_EFFECT_CHOICE(holdEffect)((holdEffect == HOLD_EFFECT_CHOICE_BAND || holdEffect == HOLD_EFFECT_CHOICE_SCARF || holdEffect == HOLD_EFFECT_CHOICE_SPECS))
 

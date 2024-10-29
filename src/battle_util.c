@@ -7930,6 +7930,21 @@ u8 ItemBattleEffects(u8 caseID, u32 battler, bool32 moveTurn)
         // Occur on each hit of a multi-strike move
         switch (atkHoldEffect)
         {
+        case HOLD_EFFECT_POISON_TOUCH:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && IsBattlerAlive(gBattlerTarget)
+             && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+             && CanBePoisoned(gBattlerAttacker, gBattlerTarget, GetBattlerAbility(gBattlerTarget))
+             && GetBattlerHoldEffect(gBattlerAttacker, TRUE) != HOLD_EFFECT_PROTECTIVE_PADS
+             //&& IsMoveMakingContact(move, gBattlerAttacker)
+             //&& gIsCriticalHit
+             && TARGET_TURN_DAMAGED) // Need to actually hit the target
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_VenomousRunePoisonMsgIn);
+                RecordItemEffectBattle(battler, HOLD_EFFECT_POISON_TOUCH);
+                effect++;
+            }
+            break;
         case HOLD_EFFECT_FLINCH:
             {
                 u16 ability = GetBattlerAbility(gBattlerAttacker);

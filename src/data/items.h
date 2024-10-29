@@ -14096,4 +14096,21 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_AirBalloon,
         .iconPalette = gItemIconPalette_AirBalloon,
     },
+    [ITEM_VENOMOUS_RUNE] =
+    {
+        .name = _("Venomous Rune"),
+        .price = 2000,
+        .holdEffect = HOLD_EFFECT_POISON_TOUCH,
+        .holdEffectParam = 0,
+        .description = COMPOUND_STRING(
+            "Elevates the holder\n"
+            "in the air. If hit,\n"
+            "this item will burst."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+        .iconPic = gItemIcon_AirBalloon,
+        .iconPalette = gItemIconPalette_AirBalloon,
+    },
 };

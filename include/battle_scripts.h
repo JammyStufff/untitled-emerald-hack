@@ -849,5 +849,7 @@ extern const u8 BattleScript_FickleBeamDoubled[];
 //Runes
 extern const u8 BattleScript_RuneActivateMsgIn[];
 extern const u8 BattleScript_SpeedsterRuneMsgIn[];
+extern const u8 BattleScript_VenomousRuneMsgIn[];
+extern const u8 BattleScript_VenomousRunePoisonMsgIn[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H
