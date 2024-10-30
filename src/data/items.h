@@ -14086,9 +14086,9 @@ const struct Item gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_SPEEDSTER_RUNE,
         .holdEffectParam = 0,
         .description = COMPOUND_STRING(
-            "Elevates the holder\n"
-            "in the air. If hit,\n"
-            "this item will burst."),
+            "A mysterious, magical\n"
+            "rune that increases a\n"
+            "Pokemon's speed by 1.3x"),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -14103,9 +14103,9 @@ const struct Item gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_POISON_TOUCH,
         .holdEffectParam = 0,
         .description = COMPOUND_STRING(
-            "Elevates the holder\n"
-            "in the air. If hit,\n"
-            "this item will burst."),
+            "A mysterious, magical\n"
+            "rune that makes a\n"
+            "Pokemon's critical hits poison"),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,

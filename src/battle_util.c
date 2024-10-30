@@ -7348,6 +7348,13 @@ u8 ItemBattleEffects(u8 caseID, u32 battler, bool32 moveTurn)
             BattleScriptPushCursorAndCallback(BattleScript_SpeedsterRuneMsgIn);
             RecordItemEffectBattle(battler, HOLD_EFFECT_SPEEDSTER_RUNE);
             break;
+            case HOLD_EFFECT_POISON_TOUCH:
+            gBattleScripting.battler = battler;
+            gBattleScripting.animArg1 = STAT_ANIM_PLUS1 + STAT_SPEED;
+            gBattleScripting.animArg2 = 0;
+            BattleScriptPushCursorAndCallback(BattleScript_VenomousRuneMsgIn);
+            RecordItemEffectBattle(battler, HOLD_EFFECT_POISON_TOUCH);
+            break;
             //Not Runes
             case HOLD_EFFECT_DOUBLE_PRIZE:
                 if (GetBattlerSide(battler) == B_SIDE_PLAYER && !gBattleStruct->moneyMultiplierItem)
@@ -7936,8 +7943,7 @@ u8 ItemBattleEffects(u8 caseID, u32 battler, bool32 moveTurn)
              && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
              && CanBePoisoned(gBattlerAttacker, gBattlerTarget, GetBattlerAbility(gBattlerTarget))
              && GetBattlerHoldEffect(gBattlerAttacker, TRUE) != HOLD_EFFECT_PROTECTIVE_PADS
-             //&& IsMoveMakingContact(move, gBattlerAttacker)
-             //&& gIsCriticalHit
+             && gIsCriticalHit
              && TARGET_TURN_DAMAGED) // Need to actually hit the target
             {
                 BattleScriptPushCursorAndCallback(BattleScript_VenomousRunePoisonMsgIn);

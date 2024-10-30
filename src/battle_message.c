@@ -852,6 +852,7 @@ static const u8 sText_TidyingUpComplete[] = _("Tidying up complete!");
 static const u8 sText_FickleBeamDoubled[] = _("{B_ATK_NAME_WITH_PREFIX} is going all\nout for this attack!");
 static const u8 sText_RuneActivate[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM} glows\nbrilliantly!");
 static const u8 sText_SpeedsterRune[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s speed was boosted 1.3x!");
+static const u8 sText_VenomousRune[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s critical hits poison!");
 static const u8 sText_PkmnPoisonedByVenomousRune[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s critical hit gave\n{B_EFF_NAME_WITH_PREFIX} poison!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
@@ -1560,6 +1561,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_CLOAKEDINAHARSHLIGHT - BATTLESTRINGS_TABLE_START] = sText_PkmnIsCloakedInAHarshLight,
     [STRINGID_RUNEACTIVATE - BATTLESTRINGS_TABLE_START] = sText_RuneActivate,
     [STRINGID_SPEEDSTERRUNE - BATTLESTRINGS_TABLE_START] = sText_SpeedsterRune,
+    [STRINGID_VENOMOUSRUNE - BATTLESTRINGS_TABLE_START] = sText_VenomousRune,
     [STRINGID_VENOMOUSRUNEPOISON - BATTLESTRINGS_TABLE_START] = sText_PkmnPoisonedByVenomousRune,
 };
 
