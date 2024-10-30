@@ -122,9 +122,9 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Swinub @ITEM_VENOMOUS_RUNE
+Swinub @ITEM_SPEEDSTER_RUNE
 Level: 10
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 3 Spe
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Flower Trick
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_3 ===
