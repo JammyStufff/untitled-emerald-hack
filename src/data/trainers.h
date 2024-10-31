@@ -134,9 +134,9 @@ F_TRAINER_FEMALE |
             .species = SPECIES_SWINUB,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 125
-            .heldItem = ITEM_VENOMOUS_RUNE,
+            .heldItem = ITEM_SPEEDSTER_RUNE,
 #line 127
-            .iv = TRAINER_PARTY_IVS(0, 0, 0, 3, 0, 0),
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
 #line 126
             .lvl = 10,
             .nature = NATURE_HARDY,

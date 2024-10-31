@@ -1,3 +1,10 @@
+script LassRebecca
+{
+	trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_3,format("Hey, this is my secret spot!\p""Get out!"),format("Fine, you can stay..."))
+	msgbox(format("How is it a secret spot if it's out in the open?\p""Why, because I beat everyone who comes, of course!"),MSGBOX_AUTOCLOSE)
+}
+
+
 raw `
 Route102_MapScripts::
 	.byte 0
